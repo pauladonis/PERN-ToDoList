@@ -3,14 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": "14.16.0",
+    "npm": "7.21.0"
   },
-  "author": "",
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "author": "Paul",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.1",
+    "bcrypt": "^5.0.1",
+    "cookie-session": "^2.0.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
     "pg": "^8.7.1"
-  }
+  },
+  "proxy": "http://localhost:3000"
 }
